@@ -1,4 +1,3 @@
-function applied_gaussian = apply_gaussian(green_image ,filter)
-
-  smoothed = conv2(green_image, filter, 'same');
-  applied_gaussian = conv2(smoothed, filter', 'same');
+function m = apply_gaussian(image, st_dev, size)
+g = gauss1d(st_dev, size);
+m = conv2(conv2(image, g', "valid"), g, "valid");

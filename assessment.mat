@@ -1,6 +1,6 @@
-# Created by Octave 4.0.0, Sat Nov 21 16:06:32 2015 GMT <hung@ubuntu>
+# Created by Octave 3.8.2, Sat Nov 21 17:33:46 2015 GMT <geckojsc@debian>
 # name: difference_gradient_filterX
-# type: matrix
+# type: global matrix
 # rows: 2
 # columns: 2
  -1 1
@@ -8,7 +8,7 @@
 
 
 # name: difference_gradient_filterY
-# type: matrix
+# type: global matrix
 # rows: 2
 # columns: 2
  1 1
@@ -30,7 +30,7 @@
 
 
 # name: laplacian
-# type: matrix
+# type: global matrix
 # rows: 3
 # columns: 3
  0 1 0
@@ -39,7 +39,7 @@
 
 
 # name: robertsA
-# type: matrix
+# type: global matrix
 # rows: 2
 # columns: 2
  0 1
@@ -47,7 +47,7 @@
 
 
 # name: robertsB
-# type: matrix
+# type: global matrix
 # rows: 2
 # columns: 2
  -1 0
@@ -55,7 +55,7 @@
 
 
 # name: sobelX
-# type: matrix
+# type: global matrix
 # rows: 3
 # columns: 3
  -1 0 1
@@ -64,7 +64,7 @@
 
 
 # name: sobelY
-# type: matrix
+# type: global matrix
 # rows: 3
 # columns: 3
  1 2 1

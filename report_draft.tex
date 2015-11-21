@@ -1,0 +1,23 @@
+9343 AM.bmp
+
+size of 1 cell on average 40x40 pixels
+edge goes in a clutter pattern, within clutter, distance between edges is roughly distance of 5 pixels, direction varies with this distance
+
+so we want gaussian filter < 40
+standard deviation 
+
+
+size < 40 cuz pixel size
+size ~5 cuz distance and we don't to take into account other cells
+___________________________________
+| size          sd
+|  5            5
+|  5            10
+|  5            15
+|  10           5
+|  10           10
+|  10           15
+
+try smaller than 5 won't remove noise
+
+don't know about standard devision value correspondance to the weight given, generally more means more weight is given to the outer pixels, in this case don't know yet if that will be better or worse, so experiement

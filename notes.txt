@@ -1,0 +1,7 @@
+
+# laplacian of gaussian example:
+#   img = get_green("9343 AM.bmp")
+#   show_image(apply_laplacian(apply_gaussian(img, 1, 40)));
+
+# clipped to match the size of the window:
+#   show_image(apply_laplacian(apply_gaussian(img, 1, 40))(1:342,1:434));

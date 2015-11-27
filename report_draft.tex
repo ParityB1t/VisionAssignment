@@ -1,0 +1,48 @@
+9343 AM.bmp
+
+size of 1 cell on average 40x40 pixels
+edge goes in a clutter pattern, within clutter, distance between edges is roughly distance of 5 pixels, direction varies with this distance
+
+so we want gaussian filter < 40
+standard deviation 
+
+
+size < 40 cuz pixel size
+size ~5 cuz distance and we don't to take into account other cells
+___________________________________
+| size          sd
+|  5            5
+|  5            10
+|  5            15
+|  10           5
+|  10           10
+|  10           15
+
+try smaller than 5 won't remove noise
+
+don't know about standard devision value correspondance to the weight given, generally more means more weight is given to the outer pixels, in this case don't know yet if that will be better or worse, so experiement
+
+____________________
+they can really benefit from edge thinning
+
+Thresholding - looked at matrix and image and determine
+
+Sobel
+
+Size    |    SD    | threshold   | edge value
+5            5          5            5-9
+5            10         1            1-3.*
+5            15         0.5?         0.5-1.*
+10           5          6/7          6-9
+10           10         3            3-9 - rather scattered, sd
+10           15         ?             ?
+
+Roberts
+
+Size    |    SD    | threshold   | edge value
+5            5          0.5          0.5-1.1*
+5            10         0.1          0.1-0.3*
+5            15         0.06         0.06-1.*
+10           5          1.5          1.5-3.*
+10           10         
+10           15         

@@ -1,14 +1,14 @@
-results = [];
+% generate the ROC values for all our selected algorithms.
+% note we still need to update the parameters to match our findings
 
-for st_dev=1:3
-  for size=3:7
-    for threshold=10:10:50
-    results = [results;
-      [st_dev,
-       size,
-       threshold,
-       roc(abs(apply_sobel(apply_gaussian(img, st_dev, size)) > 40), img_ideal)
-      ]
-    ];
-  end
-end
+results = [
+  [
+    "gaussian -> sobel",
+    roc(abs(apply_sobel(apply_gaussian(img, 1, 5)) > 40), img_ideal)
+  ];
+  [
+    "guassian -> roberts",
+    roc(abs(apply_roberts(apply_gaussian(img, 3, 5)) > 3), img_ideal)
+  ];
+]
+
